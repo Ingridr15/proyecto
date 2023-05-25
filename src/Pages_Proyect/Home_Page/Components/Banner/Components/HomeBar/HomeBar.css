@@ -1,0 +1,27 @@
+.homebar {
+    background-color: #313030;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.botones {
+    background-color: #313030;
+    color: white;
+    font-size: 3vh;
+    font-style: inherit;
+    cursor: pointer;
+    border: none;
+    margin-right: 30px;
+    text-decoration: underline;
+}
+
+.imagen {
+    height: 6vh;
+    width: 16vh;
+    margin-left: 30%;
+    cursor: pointer;
+}

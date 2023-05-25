@@ -1,0 +1,8 @@
+.slogan {
+    background-color: #3482b2;
+    color: #ffffff;
+    min-height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

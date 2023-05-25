@@ -1,0 +1,12 @@
+.logos {
+    background-image: url(../../../../../../Images/BackgroundBanner.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 45vh;
+}
+
+.Log {
+    width: 50%;
+    margin: 5vh;
+}
