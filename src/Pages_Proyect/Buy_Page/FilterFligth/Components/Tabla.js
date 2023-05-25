@@ -4,13 +4,14 @@ import Buy from '../../BuyTickets/BuyTickets';
 import { FirebaseContext } from '../../../Context/FirebaseContext';
 import './Tabla.css';
 import filter from '../FilterFligth.js';
+import { app } from '../../../../Settings/ConfigFirebase';
 
-function Tabla({ origen, destino, fecha }) {
-    const { data } = useContext(FirebaseContext);
-    const [showBuy, setShowBuy] = useState(false);
+function Tabla(props) {
+    const { origen, fecha, destino, data } = useContext(FirebaseContext);
+    const [selectedFlight, setSelectedFlight] = useState(null);
 
-    const handleBuy = () => {
-        setShowBuy(true);
+    const handleBuy = (flight) => {
+        setSelectedFlight(flight);
     };
 
     return (
@@ -31,7 +32,8 @@ function Tabla({ origen, destino, fecha }) {
                 </thead>
                 <tbody>
                     {data.map((p, index) => {
-                        {
+
+                        if (p.origen === props.origen && p.destino === props.destino) {
                             return (
                                 <tr key={index}>
                                     <td>{p.noVuelo}</td>
@@ -45,18 +47,21 @@ function Tabla({ origen, destino, fecha }) {
                                     <td>
                                         <Button
                                             variant="success"
-                                            onClick={handleBuy}
+                                            onClick={() => handleBuy(p)}
                                         >
                                             Seleccionar
                                         </Button>
                                     </td>
                                 </tr>
                             );
+                        } else {
+                            console.log(`${props.fecha.toString()} ${p.fecha.toString()}`);
+                            return null;
                         }
                     })}
                 </tbody>
             </Table>
-            {showBuy && <Buy />}
+            {selectedFlight && <Buy flight={selectedFlight} />}
         </div>
     );
 }

@@ -5,22 +5,15 @@ import FirebaseProvider from '../../Context/FirebaseContext';
 import './FilterFligth.css';
 import { app } from '../../../Settings/ConfigFirebase';
 
-function FilterFligth() {
+function FilterFligth(props) {
     const [showBuyComponent, setShowBuyComponent] = useState(false);
     const [origen, setOrigen] = useState('');
     const [destino, setDestino] = useState('');
     const [fecha, setFecha] = useState('');
     const [selectedRow, setSelectedRow] = useState(null);
-    var origenString = '';
-    var destinoString = '';
-    var fechaString = '';
 
     const handleSelect = () => {
-        origenString = origen.toString();
-        destinoString = destino.toString();
-        fechaString = fecha.toString();
-        console.log(origenString);
-
+        setSelectedRow({ origen, destino, fecha });
         setShowBuyComponent(true);
     };
 
@@ -62,15 +55,15 @@ function FilterFligth() {
                 <FirebaseProvider>
                     <Tabla
                         app={app}
-                        origen={origenString}
-                        destino={destinoString}
-                        fecha={fechaString}
+                        selected={selectedRow}
+                        origen={origen}
+                        destino={destino}
+                        fecha={fecha}
                     />
                 </FirebaseProvider>
             )}
         </div>
     );
 }
-
 
 export default FilterFligth;

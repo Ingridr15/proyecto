@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
+
 const config = {
     apiKey: "AIzaSyAjcwD4jXNHz6yKiboi8rczKUMp0hpAb3g",
     authDomain: "skytravel-4225f.firebaseapp.com",
