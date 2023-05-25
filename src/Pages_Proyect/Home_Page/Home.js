@@ -7,6 +7,8 @@ import Options from './Components/Options/Options';
 import Footer from './Components/Footer/Footer';
 import About from './../../Pages_Proyect/About_Page/About';
 import Status from './../../Pages_Proyect/Status_Page/Status';
+import Info from './../../Pages_Proyect/Info_Page/Info';
+import Airlines from './../../Pages_Proyect/Airlines_Page/Airlines';
 
 function Home() {
   return (
@@ -16,6 +18,8 @@ function Home() {
         <Route path="/buy" element={<Buy />} />
         <Route path="/about" element={<About />} />
         <Route path="/status" element={<Status />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/airlines" element={<Airlines />} />
         <Route path="*" element={<p>Path not resolved</p>} />
       </Routes>
     </BrowserRouter>

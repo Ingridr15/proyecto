@@ -7,7 +7,7 @@ import filter from '../FilterFligth.js';
 import { app } from '../../../../Settings/ConfigFirebase';
 
 function Tabla(props) {
-    const { origen, fecha, destino, data } = useContext(FirebaseContext);
+    const { data } = useContext(FirebaseContext);
     const [selectedFlight, setSelectedFlight] = useState(null);
 
     const handleBuy = (flight) => {
@@ -55,7 +55,7 @@ function Tabla(props) {
                                 </tr>
                             );
                         } else {
-                            console.log(`${props.fecha.toString()} ${p.fecha.toString()}`);
+
                             return null;
                         }
                     })}

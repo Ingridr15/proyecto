@@ -1,10 +1,10 @@
-.FormStatus {
+.Formulario {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 80%;
     /* padding: 3vh; */
     background-color: white;
     color: #3482b2;
@@ -15,6 +15,7 @@
     font-size: 15px;
     text-align: center;
     padding: 4vh;
+    margin-bottom: 6vh;
 }
 
 .mb-3 {
@@ -22,11 +23,10 @@
 }
 
 .status {
-    /* display: flex;
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
-    /*    margin-top: 5vh;
-    min-height: 30vh; */
-}
+    align-items: center;
+        margin-top: 5vh;
+        /* min-height: 30vh; */
+    }

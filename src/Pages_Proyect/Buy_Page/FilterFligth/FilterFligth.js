@@ -9,11 +9,10 @@ function FilterFligth(props) {
     const [showBuyComponent, setShowBuyComponent] = useState(false);
     const [origen, setOrigen] = useState('');
     const [destino, setDestino] = useState('');
-    const [fecha, setFecha] = useState('');
     const [selectedRow, setSelectedRow] = useState(null);
 
     const handleSelect = () => {
-        setSelectedRow({ origen, destino, fecha });
+        setSelectedRow({ origen, destino });
         setShowBuyComponent(true);
     };
 
@@ -38,15 +37,6 @@ function FilterFligth(props) {
                         placeholder="Lugar de destino"
                     />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formGroupDate">
-                    <Form.Label>F E C H A</Form.Label>
-                    <Form.Control
-                        type="date"
-                        value={fecha}
-                        onChange={(e) => setFecha(e.target.value)}
-                        placeholder="Fecha de viaje"
-                    />
-                </Form.Group>
                 <Button variant="primary" onClick={handleSelect}>
                     Buscar
                 </Button>
@@ -58,7 +48,6 @@ function FilterFligth(props) {
                         selected={selectedRow}
                         origen={origen}
                         destino={destino}
-                        fecha={fecha}
                     />
                 </FirebaseProvider>
             )}

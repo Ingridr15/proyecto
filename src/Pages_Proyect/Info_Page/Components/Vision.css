@@ -1,0 +1,9 @@
+.Vision {
+    background-color: #313030;
+    color: #ffffff;
+    min-height: 5.8vh;
+    display:flow-root;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

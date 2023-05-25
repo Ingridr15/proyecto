@@ -12,9 +12,14 @@ function HomeBar() {
                 <img className="imagen" src={imagen} alt='' />
             </Link>
             <div className="btns">
+                <Link to="/airlines">
                 <button className='botones' type="button">AEROLINEAS </button>
+                </Link>
                 <Link to="/about">
                     <button className='botones' type="button">ACERCA DE </button>
+                </Link>
+                <Link to="/info">
+                    <button className='botones' type="button">MISIÓN, VISIÓN </button>
                 </Link>
             </div>
         </div >
